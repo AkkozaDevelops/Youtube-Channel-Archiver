@@ -3,7 +3,9 @@
 
 ## Anchor Points
 [Managing config.json](#managing-config.json)
+
 [Getting a channel's ID](#getting-a-channels-id)
+
 [Getting a Youtube V3 Data API Key](#getting-a-youtube-v3-data-api-key)
 
 
