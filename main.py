@@ -1,19 +1,50 @@
-import json
+
 import time
-import urllib.request
-import re
-import os
-import youtube_dl
 
-from pytube import YouTube
+try:
+    import json
+    import urllib.request
+    import re
+    import os
+    import youtube_dl
 
-api_key = "AIzaSyAvtSfXka8Qf_i2BlbORNfTWKRPiJbXMJ8"
-channel_id = "UCIcgBZ9hEJxHv6r_jDYOMqg"
+    from pytube import YouTube
+except Exception as error:
+    print("Error loading dependancies\n\n" + str(error))
 
-ydl = youtube_dl.YoutubeDL({'outtmpl': './videos/%(title)s.%(ext)s'})
+    while True:
+        time.sleep(1)
+
+me = os.path.dirname(os.path.abspath(__file__))  
+config = None
 
 
-# Yoinked from StackOverflow, with slight modifications
+# Load config.json
+
+try:
+    config = json.load(open(me + "/config.json"))
+except Exception as error:
+    print("config.json failed to load\n\n" + str(error))
+
+    while True:
+        time.sleep(1)
+
+
+api_key = config["youtube_data_api_key"]
+channel_id = config["channel_id"]
+
+ydl = None
+
+try:
+    if config["directory"] == "default":
+        ydl = youtube_dl.YoutubeDL({'outtmpl': me + '/videos/' + config["video_format"]})
+    else:
+        ydl = youtube_dl.YoutubeDL({'outtmpl': config["directory"] + config["video_format"]})
+except Exception as error:
+    print("There was an error loading config directory\n\n" + str(error))
+
+
+# Yoinked from StackOverflow
 # https://stackoverflow.com/a/44871104
 
 def get_all_video_in_channel(channel_id):
@@ -56,11 +87,7 @@ for video in videos:
                 video,
                 download = True
             )
-       
-
     except Exception as err:
         print("failed to download " + video + "\nError was\n" + str(err) + "\n\n\n")
         
     time.sleep(1)
-
-#YouTube('https://youtube.com/watch?v=2lAe1cqCOXo').streams.first().download("./videos")

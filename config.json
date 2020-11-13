@@ -1,0 +1,6 @@
+{
+    "channel_id": "enter channel",
+    "youtube_data_api_key": "enter youtube v3 data api key",
+
+    "video_format": "%(title)s.%(ext)s"
+}
