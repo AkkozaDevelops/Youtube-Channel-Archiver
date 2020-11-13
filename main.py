@@ -1,4 +1,6 @@
 
+print("\nYoutube Channel Archiver\nCreated by Akkoza\n\nhttps://github.com/AkkozaDevelops/Youtube-Channel-Archiver\n\nHave an issue?\nYou can\n\nCreate an issue on the GitHub Repository\nOR\nAdd me on Discord [Akkoza#8767]")
+
 import time
 
 try:
