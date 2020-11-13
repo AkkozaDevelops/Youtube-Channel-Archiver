@@ -2,11 +2,15 @@
 *[originally made to archive Unus Annus' channel]*
 
 ## Anchor Points
-[Managing config.json](#managing-config.json)
+[Managing config.json](#managing-configjson)
 
 [Getting a channel's ID](#getting-a-channels-id)
 
 [Getting a Youtube V3 Data API Key](#getting-a-youtube-v3-data-api-key)
+
+
+
+
 
 
 ##  Managing config.json
@@ -27,11 +31,17 @@ To change the **directory** where the **downloaded videos** go, you simply chang
 
 
 
+
+
 ## Getting a Channel's ID
 
 This is probably the simplist step, to get a channel's id, you simply **go to the channel on YouTube** and copy the **random string** that comes after *youtube.com/channel/*
 
 ![picture of me selecting the "random string"](https://i.imgur.com/hESZ8RW.png)
+
+
+
+
 
 ## Getting a Youtube V3 Data API Key
 To get a YouTube Data key is pretty simple.
