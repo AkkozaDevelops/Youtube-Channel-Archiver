@@ -43,6 +43,9 @@ try:
 except Exception as error:
     print("There was an error loading config directory\n\n" + str(error))
 
+    while True:
+        time.sleep(1)
+
 
 # Yoinked from StackOverflow
 # https://stackoverflow.com/a/44871104
