@@ -3,7 +3,9 @@
 
 ## Requirements
 Python >= 3.5
+
 pytube
+
 youtube-dl
 
 ***[All included in the batch file]***
