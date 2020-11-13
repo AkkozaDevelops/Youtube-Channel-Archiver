@@ -1,6 +1,13 @@
 # Youtube Channel Archiver
 *[originally made to archive Unus Annus' channel]*
 
+## Requirements
+Python >= 3.5
+pytube
+youtube-dl
+
+***[All included in the batch file]***
+
 ## Anchor Points
 [Managing config.json](#managing-configjson)
 
