@@ -34,7 +34,7 @@ except Exception as error:
 
 
 api_key = config["youtube_data_api_key"]
-channel_id = config["channel_id"]
+channel_id = str(input("Please input the *channel id* here > "))
 
 ydl = None
 
